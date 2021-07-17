@@ -66,11 +66,12 @@ public class HashMapService {
 				}
 			}
 		}
+		System.out.println("-------------------------");
 	}
 
 	private int generateBucketIndex(String key) {
 		int hashCode = key.hashCode();
-		int bucketIndex = hashCode % 10;
+		int bucketIndex =Math.abs(hashCode) % 10;
 		return bucketIndex;
 	}
 	
