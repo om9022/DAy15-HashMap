@@ -13,7 +13,7 @@ public class HashMapMain {
 					hashMap1.put(string, 1);
 				}
 				hashMap1.print();
-				
+
 				//UC2 - frequency of words in paragraph
 				HashMapService hashMap2 = new HashMapService();
 				String givenParagraph= "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
@@ -23,5 +23,16 @@ public class HashMapMain {
 					hashMap2.put(string, 1);
 				}
 				hashMap2.print();
+
+				//UC3- removed a word 
+				HashMapService hashMap3 = new HashMapService();
+				String givenParagraph2= "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
+				String[] myStr3 = givenParagraph2.toLowerCase().split(" ");
+				for (String string : myStr3)
+				{
+					hashMap3.put(string, 1);
+				}
+				hashMap3.remove("paranoid");
+				hashMap3.print();
 	}
 }
